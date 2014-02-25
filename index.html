@@ -5,8 +5,17 @@
 <title>Grid Layout Generator</title>
 <style type='text/css'>
 
-html, body { height: 100%; width: 100%; margin: 0; }    
+html, body { 
+    height: 100%; 
+    width: 100%; 
+    margin: 0;
+    background-color:black;}    
 
+#vidz{
+   position:absolute;
+   width:100%;
+   height:100%;
+   z-index:1}    
     
 .wrapper{
    position: relative;
@@ -15,14 +24,18 @@ html, body { height: 100%; width: 100%; margin: 0; }
    width: 100%;
    height:33%;
    margin-bottom: 10px;
-   background-color: #cccccc
+   background-color: #cccccc;
+   opacity:0.0;  
+   z-index:1;    
 }
 .grid{
    position: relative;
    float: left;
    width: 16.66%;
    height:100%;
-   background-color: #828282
+   background-color: #828282;
+   opacity:0.0;
+   z-index:1;   
 }
 
 </style>
@@ -32,6 +45,8 @@ html, body { height: 100%; width: 100%; margin: 0; }
     
 </head>
 <body>
+    <div id="vid"></div>
+    
 	<div class="wrapper">
 	
           <div onclick="playSound('audio/test.mp3')" class="grid hollow"></div>
@@ -66,11 +81,20 @@ var snd = new Audio(soundfile); // buffers automatically when created
 snd.play();
 
 }
-
-
-    
-    
+     
 </script>
+ 
+<script type="text/javascript">
+    
+// The following code is licensed under the Do WTF You Want To Public License v2 (WTFPL-2.0)    
+    
+var movies = ["video/two.mp4", "video/three.mp4", "video/five.mp4"]; //filenames, add however many
+var movie = movies[Math.floor(Math.random() * movies.length)]; // randomly picks movie from the array
+//Inserts random movie into the vid div, with loop, autoplay, reload properties     
+document.getElementById('vid').innerHTML = '<video id="vidz" loop autoplay preload><source src="'+ movie + '"></source></video>';   
+</script>  
+    
+    
     
 </body>
 </html>

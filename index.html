@@ -33,41 +33,43 @@ html, body { height: 100%; width: 100%; margin: 0; }
 </head>
 <body>
 	<div class="wrapper">
-	    <span id="dummy" onclick="playSound('audio/test.mp3');"> 
-                <div class="grid hollow"></div>
-        </span>
-        <span id="dummy" onclick="playSound('audio/sword.mp3');"> 
-                <div class="grid hollow"></div>
-        </span>
-          <div class="grid hollow"></div>
-          <div class="grid hollow"></div>
-          <div class="grid hollow"></div>
-          <div class="grid hollow"></div>
+	
+          <div onclick="playSound('audio/test.mp3')" class="grid hollow"></div>
+          <div onclick="playSound('audio/test.mp3')" class="grid hollow"></div>
+          <div onclick="playSound('audio/test.mp3')" class="grid hollow"></div>
+          <div onclick="playSound('audio/test.mp3')" class="grid hollow"></div>
+          <div onclick="playSound('audio/test.mp3')" class="grid hollow"></div>
+          <div onclick="playSound('audio/test.mp3')" class="grid hollow"></div>
     </div>
 	<div class="wrapper">
-	      <div class="grid hollow"></div>
-          <div class="grid hollow"></div>
-          <div class="grid hollow"></div>
-          <div class="grid hollow"></div>
-          <div class="grid hollow"></div>
-          <div class="grid hollow"></div>
+	      <div onclick="playSound('audio/test.mp3')" class="grid hollow"></div>
+          <div onclick="playSound('audio/test.mp3')" class="grid hollow"></div>
+          <div onclick="playSound('audio/test.mp3')" class="grid hollow"></div>
+          <div onclick="playSound('audio/test.mp3')" class="grid hollow"></div>
+          <div onclick="playSound('audio/test.mp3')" class="grid hollow"></div>
+          <div onclick="playSound('audio/test.mp3')" class="grid hollow"></div>
     </div>
 	<div class="wrapper">
-	      <div class="grid hollow"></div>
-          <div class="grid hollow"></div>
-          <div class="grid hollow"></div>
-          <div class="grid hollow"></div>
-          <div class="grid hollow"></div>
-          <div class="grid hollow"></div>
+	      <div onclick="playSound('audio/test.mp3')" class="grid hollow"></div>
+          <div onclick="playSound('audio/test.mp3')" class="grid hollow"></div>
+          <div onclick="playSound('audio/test.mp3')" class="grid hollow"></div>
+          <div onclick="playSound('audio/test.mp3')" class="grid hollow"></div>
+          <div onclick="playSound('audio/test.mp3')" class="grid hollow"></div>
+          <div onclick="playSound('audio/test.mp3')" class="grid hollow"></div>
     </div>
     
     
 
 <script language="javascript" type="text/javascript">
 function playSound(soundfile) {
-document.getElementById("dummy").innerHTML=document.getElementById("dummy").innerHTML +
-"<embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+var snd = new Audio(soundfile); // buffers automatically when created
+snd.play();
+
 }
+
+
+    
+    
 </script>
     
 </body>
